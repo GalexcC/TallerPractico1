@@ -1,11 +1,15 @@
-
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import RegistroScreen from './src/screen/Registro'
+import RegistroScreen from './src/screen/Registro';
 import InicioScreen from './src/screen/Inicio';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Inicio: undefined;
+  Registro: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   return (
